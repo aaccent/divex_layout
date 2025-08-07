@@ -18,6 +18,15 @@
 
 @font-face {
     src:
+        local('Roboto-Light'),
+        url('assets/fonts/Roboto/Roboto-Light.woff2') format('woff2'),
+        url('assets/fonts/Roboto/Roboto-Light.woff') format('woff'),
+        url('assets/fonts/Roboto/Roboto-Light.ttf') format('ttf');
+    font-family: Roboto-Light;
+}
+
+@font-face {
+    src:
         local('Mozer-SemiBold'),
         url('assets/fonts/Mozer/Mozer-SemiBold.woff2') format('woff2'),
         url('assets/fonts/Mozer/Mozer-SemiBold.woff') format('woff'),

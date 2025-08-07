@@ -1,3 +1,10 @@
+@use 'npm/swiper/swiper';
+@use 'npm/swiper/modules/navigation';
+@use 'npm/swiper/modules/pagination';
+@use 'npm/swiper/modules/effect-fade';
+@use 'npm/swiper/modules/autoplay';
+@use 'npm/swiper/modules/thumbs';
+
 @use 'general/_preflight.css';
 @use 'general/reset';
 @use 'general/variables';
@@ -9,6 +16,7 @@
 
 // Ui
 @use 'ui/buttons/close-btn';
+@use 'ui/buttons/button';
 
 // Page
 @use 'layout/header/header';
@@ -16,3 +24,4 @@
 
 // Components
 @use 'components/clients/clients';
+@use 'components/main-hero/main-hero';

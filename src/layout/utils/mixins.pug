@@ -11,3 +11,11 @@ mixin img(src)
 
 mixin anchor(href)
     a(href=href || '#')&attributes(attributes): block
+
+mixin button(props)
+    -
+        props = Object.assign({
+            mainColor: 'var(--base_100)',
+            hoverColor: 'var(--accent_100)',
+            hoverBorder: true
+        }, props || {})
