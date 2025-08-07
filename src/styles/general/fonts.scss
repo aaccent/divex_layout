@@ -1,0 +1,26 @@
+@font-face {
+    src:
+        local('Roboto-Medium'),
+        url('assets/fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+        url('assets/fonts/Roboto/Roboto-Medium.woff') format('woff'),
+        url('assets/fonts/Roboto/Roboto-Medium.ttf') format('ttf');
+    font-family: Roboto-Medium;
+}
+
+@font-face {
+    src:
+        local('Roboto-Regular'),
+        url('assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('assets/fonts/Roboto/Roboto-Regular.woff') format('woff'),
+        url('assets/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+    font-family: Roboto-Regular;
+}
+
+@font-face {
+    src:
+        local('Mozer-SemiBold'),
+        url('assets/fonts/Mozer/Mozer-SemiBold.woff2') format('woff2'),
+        url('assets/fonts/Mozer/Mozer-SemiBold.woff') format('woff'),
+        url('assets/fonts/Mozer/Mozer-SemiBold.ttf') format('ttf');
+    font-family: Mozer-SemiBold;
+}

@@ -1,0 +1,44 @@
+include layout/utils
+
+-
+    var clients = [
+        {
+            icon: require('assets/content/clients/1.svg'),
+            span: 2
+        },
+        {
+            icon: require('assets/content/clients/2.svg'),
+        },
+        {
+            icon: require('assets/content/clients/3.svg'),
+            span: 2
+        },
+        {
+            icon: require('assets/content/clients/4.svg'),
+        },
+        {
+            icon: require('assets/content/clients/5.svg'),
+            span: 3
+        },
+        {
+            icon: require('assets/content/clients/6.svg'),
+        },
+        {
+            icon: require('assets/content/clients/7.svg'),
+            span: 3,
+            position: 'end'
+        },
+        {
+            icon: require('assets/content/clients/8.svg'),
+            span: 1
+        },
+    ]
+
++transparentGradientSection.clients
+    .clients__title-wrapper
+        h2.clients__title.section__title Наши клиенты
+        .clients__subtitle.section__subtitle Нам доверяют те, кто не может позволить себе ошибку — в эфире, на сцене, в продакшене
+    .clients__list
+        each item in clients
+            .clients__item(style=`grid-column:span ${item.span || 1}; place-self:${item.position || 'start'}`)
+                +img(item.icon).clients__item-icon

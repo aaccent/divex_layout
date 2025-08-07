@@ -8,8 +8,92 @@ html {
 
 .container {
     margin: 0 auto;
-    padding: 0 15px;
-    max-width: 1230px;
+    width: 100%;
+    max-width: 1636px;
+}
+
+.section {
+    margin-top: 160px;
+    padding: 0 94px 0 190px;
+
+    &:first-child,
+    &.gradient,
+    &.gradient-reverse,
+    &.gradient-transparent {
+        margin-top: 0;
+    }
+
+    &.gradient {
+        background: linear-gradient(#030404, #26292a);
+    }
+
+    &.gradient-reverse {
+        background: linear-gradient(#26292a, #030404);
+    }
+
+    &.gradient-transparent {
+        position: relative;
+        height: 926px;
+
+        .container {
+            position: relative;
+            z-index: 3;
+        }
+
+        .section__bg {
+            inset: 0;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            display: block;
+        }
+
+        &::before {
+            top: 0;
+            background: linear-gradient(#030404, transparent);
+        }
+
+        &::after {
+            bottom: 0;
+            background: linear-gradient(transparent, #030404);
+        }
+    }
+
+    &__title {
+        gap: 8px;
+        display: flex;
+        align-items: center;
+        color: var(--base_150);
+        font: var(--text-base_100);
+        font-family: var(--roboto-medium);
+        font-size: 1.4rem;
+
+        &::before {
+            content: '';
+            @include utils.circle(8px);
+            background-color: var(--accent_100);
+        }
+    }
+
+    &__subtitle {
+        font: var(--header-base_200);
+        letter-spacing: -0.01rem;
+        text-transform: uppercase;
+    }
 }
 
 .main-wrapper {
@@ -28,8 +112,15 @@ html {
     display: none;
 }
 
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+
 body {
     overflow-x: clip;
+    color: var(--base_100);
+    background-color: var(--bg);
 }
 
 html.disable-scroll {
@@ -48,7 +139,7 @@ html.disable-scroll {
 
 .content {
     p + p {
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     @media only screen and (max-width: utils.$tablet1200) {

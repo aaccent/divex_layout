@@ -33,3 +33,12 @@ mixin sectionBlock(props)
             .container: block
         else
             block
+
+mixin transparentGradientSection(props)
+    -
+        props = Object.assign({
+            bgImage:require('assets/static/clients-section-bg.png')
+        }, props|| {})
+    section.section.gradient-transparent&attributes(attributes)
+        +img(props.bgImage).section__bg
+        .container: block
