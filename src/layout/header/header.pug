@@ -1,2 +1,57 @@
+include layout/utils
+
+-
+    var menu = [
+        {
+            item: 'Декорации для ТВ',
+            submenu: ['Стол ведущего для телестудии ','Декорации для телевидения','Задник для ТВ программ','ТВ декорации для шоу программ','Декорации для телестудии','Декорации для съемочных студий   на ТВ',]
+        },
+        {
+            item: 'Оформление мероприятий',
+            submenu: ['Оформление и застройка. Изготовление декораций', 'Оформление Конференций / Форумов', 'Деловые мероприятия', 'Презентации', 'Оформление спортивных мероприятий', 'Оформление корпоративных мероприятий', 'Оформление фестивалей', 'Оформление сцены']
+        },
+        {
+            item: 'Кейсы',
+        },
+        {
+            item: 'Блог',
+        },
+        {
+            item: 'Контакты',
+        },
+    ]
+
 header.header
     .container
+        +img(require('assets/icons/logo.svg')).header__logo
+        .header__contacts
+            +anchor('tel:8 (495) 488-65-96').header__tel 8 (495) 488-65-96
+            +anchor('mailto:info@divex-group.ru').header__mail info@divex-group.ru
+        .header__messagers
+            +anchor('').header__tg
+                +img(require('assets/icons/tg.svg'))
+            +anchor('').header__wa
+                +img(require('assets/icons/wa.svg'))
+    .header-menu
+        .header-menu__wrapper
+            +img(require('assets/icons/burger.svg')).header-menu__burger
+            .header__messagers.header-menu__messagers
+                +anchor('').header__tg
+                    +img(require('assets/icons/tg.svg'))
+                +anchor('').header__wa
+                    +img(require('assets/icons/wa.svg'))
+            .header-menu__content
+                +img(require('assets/icons/logo.svg')).header__logo
+                ul.header-menu__list
+                    each item in menu
+                        li.header-menu__item
+                            +anchor('')= item.item
+                            if item.submenu
+                                ul.header-menu__sub
+                                    each subItem in item.submenu
+                                        li.header-menu__sub-item
+                                            +anchor('')= subItem
+                .header__contacts.header-menu__contacts
+                    +anchor('tel:8 (495) 488-65-96').header__tel 8 (495) 488-65-96
+                    +anchor('mailto:info@divex-group.ru').header__mail info@divex-group.ru
+                    button.button.header-menu__button(data-action='popup', data-popup='call-popup') Оставить заявку

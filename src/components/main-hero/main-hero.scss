@@ -37,7 +37,6 @@
         &-title {
             margin-bottom: 24px;
             font: var(--header-base_100);
-            line-height: 86px;
             text-transform: uppercase;
         }
 
@@ -95,7 +94,7 @@
 
             &-active {
                 position: relative;
-                width: 68px;
+                min-width: 68px;
                 border-radius: 7px;
 
                 &::after {
@@ -107,6 +106,7 @@
                     display: block;
                     opacity: 1;
                     background-color: var(--accent_100);
+                    border-radius: 7px;
                     animation: fill 3.3s linear;
                 }
             }
