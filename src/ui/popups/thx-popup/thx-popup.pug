@@ -2,6 +2,6 @@ include layout/utils
 include features/popup/popup
 
 +popup("thx-popup", "thx-popup")
-    .thx-popup__title= 'Спасибо!\n Ваш запрос успешно отправлен'
+    .thx-popup__title!= 'Спасибо!<br> Ваш запрос успешно отправлен'
     .thx-popup__text Пожалуйста дождитесь звонка нашего менеджера для уточнения деталей
     button.thx-popup__button.button.button--accent_200 Вернуться на станицу

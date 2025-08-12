@@ -1,0 +1,83 @@
+@use 'styles/utils';
+
+.form-block {
+    &:has(form._success) {
+        .form-block__content--thx {
+            opacity: 1;
+            visibility: visible;
+            transition: all 300ms linear;
+        }
+
+        .form-block__content {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 300ms linear;
+        }
+    }
+    .container {
+        position: relative;
+        padding: 80px;
+        height: 558px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        background-color: var(--accent_100);
+        border-radius: 20px;
+    }
+
+    &__name {
+        &::before {
+            background-color: var(--accent_200);
+        }
+    }
+
+    &__content,
+    &__content--thx {
+        position: absolute;
+        top: 80px;
+        right: 80px;
+        width: 100%;
+        max-width: 1004px;
+        height: 398px;
+        display: flex;
+        flex-direction: column;
+        transition: all 300ms linear;
+    }
+
+    &__content--thx {
+        opacity: 0;
+        visibility: hidden;
+
+        .button {
+            margin-top: auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 26px;
+        font: 6rem/1.1 var(--mozer);
+        letter-spacing: -0.01rem;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        font: 1.6rem/1.37 var(--roboto-regular);
+    }
+
+    form {
+        gap: 18px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .input {
+            width: 49%;
+        }
+    }
+
+    &__policy {
+        margin-top: auto;
+        font: 1.4rem/1.42 var(--roboto-light);
+        opacity: 0.5;
+    }
+}

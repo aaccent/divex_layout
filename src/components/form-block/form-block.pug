@@ -1,0 +1,16 @@
+include layout/utils
+
++section.form-block
+    .form-block__name.section__title Мы на связи
+    .form-block__content
+        .form-block__title!= 'Нужна консультация?<br>Оставьте заявку — мы подскажем!'
+        .form-block__text Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман семантически отражает хорей. Представленный лексико-семантический
+        form(novalidate, data-handler='path.php')
+            input.input(type='text', required, name='name', placeholder='Ваше Имя')
+            input.input(type='tel', required, name='tel', placeholder='Номер телефона')
+            button.button.button--accent_200(type='submit') Получить консультацию
+        .form-block__policy Нажимая на кнопку «Получить консультацию» вы подтверждаете своё согласие с политикой конфиденциальности сайта
+    .form-block__content--thx
+        .form-block__title!= 'Спасибо!<br>Ваш запрос успешно отправлен'
+        .form-block__text Пожалуйста дождитесь звонка нашего менеджера для уточнения деталей
+        button.button.button--accent_200 Понятно

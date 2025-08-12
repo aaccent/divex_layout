@@ -31,18 +31,18 @@ async function submitHandler(event: SubmitEvent) {
         body: formData,
     })
 
-    // if (!res.ok) {
-    //     return console.error(
-    //         'Error while submitting form\n',
-    //         form,
-    //         '\n',
-    //         'FormData:\n',
-    //         formData,
-    //         '\n',
-    //         'Response:\n',
-    //         res,
-    //     )
-    // }
+    if (!res.ok) {
+        return console.error(
+            'Error while submitting form\n',
+            form,
+            '\n',
+            'FormData:\n',
+            formData,
+            '\n',
+            'Response:\n',
+            res,
+        )
+    }
 
     form.dispatchEvent(formSent)
 }
