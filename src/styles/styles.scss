@@ -13,10 +13,13 @@
 
 // Popup
 @use 'features/popup/popup';
+@use 'ui/popups/call-popup/call-popup';
+@use 'ui/popups/thx-popup/thx-popup';
 
 // Ui
 @use 'ui/buttons/close-btn';
 @use 'ui/buttons/button';
+@use 'ui/input';
 
 // Page
 @use 'layout/header/header';

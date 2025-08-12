@@ -1,0 +1,118 @@
+@use 'styles/utils';
+
+.footer {
+    padding: 80px 94px 80px 190px;
+    background-color: var(--accent_200);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left-block,
+    &__right-block {
+        display: flex;
+    }
+
+    &__left-block {
+        gap: 76px;
+    }
+
+    &__right-block {
+        width: 758px;
+        justify-content: space-between;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &__logo {
+        height: 56px;
+    }
+
+    &__policy {
+        width: 100%;
+        max-width: 416px;
+        display: flex;
+        flex-direction: column;
+
+        a,
+        span {
+            margin-bottom: 10px;
+            font: 1.5rem/1.3 var(--roboto-regular);
+        }
+
+        span {
+            margin-top: 16px;
+        }
+    }
+
+    &__contacts {
+        gap: 2px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tel {
+        font: 2.6rem/1.1 var(--roboto-semibold);
+    }
+
+    &__mail {
+        font: 1.6rem/1.5 var(--roboto-regular);
+    }
+
+    &__aaccent {
+        gap: 16px;
+        display: flex;
+        font: 1.4rem/1.1 var(--roboto-light);
+    }
+
+    &__aaccent-logo {
+        object-fit: cover;
+        object-position: center;
+        width: 130px;
+    }
+
+    &__menu {
+        gap: 24px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font: 1.7rem/1.3 var(--roboto-regular);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -60px;
+            width: 1px;
+            height: 100%;
+            background-color: hsla(0, 0%, 100%, 0.3);
+        }
+    }
+
+    &__address {
+        width: 100%;
+        max-width: 266px;
+        font: 1.6rem/1.3 var(--roboto-regular);
+    }
+
+    &__messagers {
+        gap: 12px;
+        display: flex;
+    }
+
+    &__wa,
+    &__tg {
+        @include utils.square(42px);
+
+        img {
+            object-position: center;
+            object-fit: cover;
+        }
+    }
+}

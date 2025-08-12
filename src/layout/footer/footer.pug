@@ -1,2 +1,33 @@
+include layout/utils
+
+- var menu = ['Главная', 'Декорации для ТВ', 'Мероприятия', 'Кейсы', 'Блог', 'Контакты']
+
 footer.footer
     .container
+        .footer__left-block
+            .footer__column
+                +img(require('assets/icons/logo.svg')).footer__logo
+                .footer__policy
+                    +anchor('') Соглашение об обработке персональных данных
+                    +anchor('') Политика конфиденциальности
+                    span 2006-2025 — Дивэкс Групп — Дивэкс —ТАНАД
+            .footer__column
+                .footer__contacts
+                    +anchor('tel:8 (495) 488-65-96').footer__tel 8 (495) 488-65-96
+                    +anchor('mailto:info@divex-group.ru').footer__mail info@divex-group.ru
+                .footer__aaccent
+                    span Разработано:
+                    +anchor('https://www.aaccent.ru/')
+                        +img(require('assets/icons/logo_accent.svg')).footer__aaccent-logo
+        .footer__right-block
+            ul.footer__menu
+                each item in menu
+                    li.footer__menu-item
+                        +anchor('')= item
+            .footer__column
+                .footer__address 141031, Московская область, городской округ Мытищи, поселок Вешки, улица Архитектора Жолтовского, строение № 1А/1, офис №2
+                .footer__messagers
+                    +anchor.footer__wa
+                        +img(require('assets/icons/wa.svg'))
+                    +anchor.footer__tg
+                        +img(require('assets/icons/tg.svg'))
