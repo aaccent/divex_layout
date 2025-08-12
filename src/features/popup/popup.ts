@@ -81,3 +81,8 @@ export function closeActivePopup(code?: any | 'process') {
     activePopup.classList.remove('opened')
     activePopup.dispatchEvent(closedPopupEvent)
 }
+
+popups.forEach((popup) => {
+    const popupForm = popup.querySelector('form')
+    popupForm?.addEventListener('form-sent', () => openPopup('thx-popup'))
+})

@@ -31,18 +31,18 @@ async function submitHandler(event: SubmitEvent) {
         body: formData,
     })
 
-    if (!res.ok) {
-        return console.error(
-            'Error while submitting form\n',
-            form,
-            '\n',
-            'FormData:\n',
-            formData,
-            '\n',
-            'Response:\n',
-            res,
-        )
-    }
+    // if (!res.ok) {
+    //     return console.error(
+    //         'Error while submitting form\n',
+    //         form,
+    //         '\n',
+    //         'FormData:\n',
+    //         formData,
+    //         '\n',
+    //         'Response:\n',
+    //         res,
+    //     )
+    // }
 
     form.dispatchEvent(formSent)
 }
@@ -62,9 +62,13 @@ function validateForm(form: HTMLFormElement): Boolean {
         if (input.value !== '') return
 
         valid = false
-        input.classList.add('invalid')
-        input.addEventListener('input', () => input.classList.remove('invalid'), { once: true })
+        input.classList.add('_invalid')
+        input.addEventListener('input', () => input.classList.remove('_invalid'), { once: true })
     })
 
     return valid
 }
+
+forms.forEach((form) => {
+    form.addEventListener('form-sent', () => {})
+})

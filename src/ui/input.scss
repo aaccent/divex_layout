@@ -1,0 +1,17 @@
+@use 'styles/utils';
+
+.input {
+    padding: 16px 20px;
+    width: 100%;
+    color: var(--bg);
+    background-color: var(--base_100);
+    border-radius: 34px;
+
+    &::placeholder {
+        color: #26292a;
+    }
+
+    &._invalid {
+        border: 1px solid red;
+    }
+}

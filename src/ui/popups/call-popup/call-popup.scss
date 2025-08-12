@@ -1,0 +1,35 @@
+@use 'styles/utils';
+
+.call-popup {
+    &__inner {
+        padding: 54px;
+        width: 100%;
+        max-width: 723px;
+        background-color: var(--accent_100);
+        border-radius: 20px;
+    }
+
+    &__title {
+        margin-bottom: 34px;
+        font: 5.4rem/1.1 var(--mozer);
+        letter-spacing: -0.01rem;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-bottom: 24px;
+        font: 1.6rem/1.14 var(--roboto-regular);
+    }
+
+    &__form {
+        gap: 18px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__policy {
+        margin-top: 12px;
+        font: 1.4rem/1.33 var(--roboto-light);
+        opacity: 0.5;
+    }
+}
