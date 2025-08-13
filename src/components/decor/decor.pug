@@ -1,0 +1,60 @@
+include layout/utils
+
+-
+    var list = [
+        {
+            className: 'accent-100',
+            icon: require('assets/icons/decorations/table.svg'),
+            image: require('assets/content/decor/1.jpg'),
+            title: 'СТОЛ ВЕДУЩЕГО ДЛЯ ТЕЛЕСТУДИИ',
+            description: 'Представляем вам высококачественные ТВ столы для различных телевизионных проектов. Наши изделия отличаются современным дизайном и функциональностью, соответствуя самым высоким стандартам качества материалов.',
+
+        },
+        {
+            className: 'accent-100',
+            icon: require('assets/icons/decorations/tv-decor.svg'),
+            image: require('assets/content/decor/2.jpg'),
+            title: 'ДЕКОРАЦИИ ДЛЯ ТЕЛЕВИДЕНИЯ',
+            description: 'Мы обладаем широкими возможностями для изготовления декораций для телевидения, которые помогут создать нужную атмосферу и образ на экране. ',
+        }, {
+            className: 'accent-200',
+            icon: require('assets/icons/decorations/backdrop.svg'),
+            image: require('assets/content/decor/3.jpg'),
+            title: 'Задник для тв программы',
+            description: 'Задник для тв программы играет важную роль в создании атмосферы и настроения для телепередач. Он являются неотъемлемой частью съемочной студии, специально оформленный под конкретную передачу.',
+        }, {
+            className: 'accent-200',
+            icon: require('assets/icons/decorations/show_decor.svg'),
+            image: require('assets/content/decor/4.jpg'),
+            title: 'ТВ ДЕКОРАЦИИ ДЛЯ ШОУ ПРОГРАММ',
+            description: 'Создаем впечатляющие декорации, специально разработанные для шоу программ. Они помогут придать вашему мероприятию неповторимый вид и атмосферу, впечатлить зрителей и участников.',
+        }, {
+            className: 'dark',
+            icon: require('assets/icons/decorations/tv_studio_decor.svg'),
+            image: require('assets/content/decor/5.jpg'),
+            title: 'ДЕКОРАЦИИ ДЛЯ ТЕЛЕСТУДИИ',
+            description: 'Создание декораций для телестудии - это искусство, требующее от дизайнера-проектировщика глубокого понимания специфики профессии и учета особых "законов", действующих в павильоне.',
+        }, {
+            className: 'dark',
+            icon: require('assets/icons/decorations/film_studio_decor.svg'),
+            image: require('assets/content/decor/6.jpg'),
+            title: 'ДЕКОРАЦИИ ДЛЯ СЪЕМОЧНЫХ СТУДИЙ НА ТВ',
+            description: 'Декорации для съемок любой тв программы– сложная и взаимосвязанная система, играющая ключевую роль в создании качественного контента для зрителей. Каждая деталь декорации должна быть идеальна, как внешне, так и функционально.',
+        },
+    ]
+
++section.decor
+    .decor__title-wrapper
+        .decor__title.section__title ТВ декорации
+        .decor__subtitle.section__subtitle Архитектура кадра: профессиональные декорации для ТВ
+    ul.decor__list
+        each item in list
+            li
+                +anchor.decor__item(class=item.className)
+                    +img(item.image).decor__item-image
+                    +img(item.icon).decor__item-icon
+                    .decor__item-title= item.title
+                    .decor__item-description= item.description
+                    -
+                        var className = item.className==='dark' ? 'button--accent_100' : item.className==='accent-200' ? 'button--base-accent_200' : ''
+                    .decor__item-button.button(href='')(class=className) Узнать больше
