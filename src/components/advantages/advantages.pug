@@ -1,0 +1,37 @@
+include layout/utils
+
+-
+    var list = [
+        {
+            icon: require('assets/icons/advantages/1.svg'),
+            title: 'Полный цикл работ под ключ',
+            description: 'От проектирования и подбора оборудования до монтажа, настройки и сопровождения — мы берём на себя все этапы.'
+        },
+        {
+            icon: require('assets/icons/advantages/2.svg'),
+            title: 'Глубокая техническая экспертиза',
+            description: '16 лет опыта в телевизионной и ивент-среде позволяют нам точно понимать специфику задач и предлагать надёжные решения.'
+        },
+        {
+            icon: require('assets/icons/advantages/3.svg'),
+            title: 'Надёжность в сроках и реализации',
+            description: 'Работаем по регламенту, не затягиваем дедлайны, не уходим в компромиссы по качеству — у нас слаженные процессы и команда.'
+        },
+        {
+            icon: require('assets/icons/advantages/4.svg'),
+            title: 'Оборудование от мировых брендов',
+            description: 'Мы поставляем и интегрируем проверенную технику от ведущих производителей, подбирая её под реальные задачи заказчика.'
+        },
+    ]
+
++section.gradient-reverse.advantages
+    .advantages__title-wrapper
+        h2.advantages__title.section__title Наши преимущества
+        .advantages__subtitle.section__subtitle Не просто опыт — системный подход к каждой задаче
+            .advantages__text С нами легко выстраивать процессы: мы быстро вникаем в задачу, предлагаем оптимальные решения и сопровождаем проект до самого конца. Наши клиенты знают, что мы не бросаем на полпути, умеем слушать и точно следуем техническим требованиям.
+    .advantages__list
+        each item in list
+            .advantages__item
+                +img(item.icon).advantages__item-icon
+                .advantages__item-title= item.title
+                .advantages__item-description= item.description

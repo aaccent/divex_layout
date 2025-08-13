@@ -44,14 +44,18 @@
         flex-direction: column;
         &-title {
             margin-bottom: 18px;
-            font: 3rem/1.33 var(--mozer);
+            font-family: var(--mozer);
+            font-size: 3rem;
+            line-height: 133%;
             text-transform: uppercase;
         }
 
         &-content {
             gap: 18px;
             display: flex;
-            font: 1.6rem/1.37 var(--roboto-regular);
+            font-family: var(--roboto-regular);
+            font-size: 1.6rem;
+            line-height: 137%;
             opacity: 0.9;
         }
     }

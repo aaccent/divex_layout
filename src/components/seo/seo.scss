@@ -1,0 +1,39 @@
+@use 'styles/utils';
+
+.seo {
+    padding-bottom: 160px;
+
+    &__title {
+        &-wrapper {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+    }
+
+    &__subtitle {
+        width: 100%;
+        max-width: 1084px;
+    }
+
+    &__body {
+        padding-left: 552px;
+    }
+
+    &__content {
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+
+        &._opened {
+            -webkit-line-clamp: none;
+        }
+    }
+
+    &__button {
+        margin-top: 32px;
+        width: 292px;
+    }
+}

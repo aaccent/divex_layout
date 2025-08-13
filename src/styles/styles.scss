@@ -20,6 +20,7 @@
 @use 'ui/buttons/close-btn';
 @use 'ui/buttons/button';
 @use 'ui/input';
+@use 'ui/content';
 
 // Page
 @use 'layout/header/header';
@@ -32,3 +33,5 @@
 @use 'components/events/events';
 @use 'components/decor/decor';
 @use 'components/about/about';
+@use 'components/advantages/advantages';
+@use 'components/seo/seo';

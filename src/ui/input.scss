@@ -4,7 +4,9 @@
     padding: 16px 20px;
     width: 100%;
     color: var(--bg);
-    font: 1.6rem/1.38 var(--roboto-regular);
+    font-family: var(--roboto-regular);
+    font-size: 1.6rem;
+    line-height: 138%;
     background-color: var(--base_100);
     border-radius: 34px;
 

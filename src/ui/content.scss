@@ -1,0 +1,19 @@
+@use 'styles/utils';
+
+.content {
+    p {
+        font-family: var(--roboto-regular);
+        font-size: 1.6rem;
+        line-height: 137%;
+    }
+
+    p + p {
+        margin-top: 10px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        p + p {
+            margin-top: 12px;
+        }
+    }
+}

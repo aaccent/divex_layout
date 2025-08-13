@@ -1,0 +1,72 @@
+@use 'styles/utils';
+
+.advantages {
+    .container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    &__title {
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+    }
+
+    &__subtitle {
+        width: 100%;
+        max-width: 1064px;
+    }
+
+    &__text {
+        margin-top: 50px;
+        font-family: var(--roboto-regular);
+        font-size: 1.6rem;
+        line-height: 137%;
+        text-transform: none;
+    }
+
+    &__list {
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 32px;
+        display: grid;
+    }
+
+    &__item {
+        padding: 32px;
+        width: 532px;
+        height: 317px;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(180, 2%, 21%);
+        border-radius: 14px;
+
+        &:nth-child(4n + 1) {
+            grid-column: span 2;
+            place-self: end;
+        }
+
+        &-icon {
+            @include utils.square(78px);
+            object-position: center;
+            object-fit: cover;
+            margin-bottom: 48px;
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            font-family: var(--mozer);
+            font-size: 3.2rem;
+            line-height: 131%;
+            text-transform: uppercase;
+        }
+
+        &-description {
+            font-family: var(--roboto-regular);
+            font-size: 1.6rem;
+            line-height: 137%;
+        }
+    }
+}

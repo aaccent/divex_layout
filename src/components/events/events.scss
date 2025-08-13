@@ -71,8 +71,12 @@
             }
 
             .events__item-image {
-                opacity: 1;
+                opacity: 0.5;
                 visibility: visible;
+            }
+
+            .events__item-description {
+                -webkit-line-clamp: none;
             }
 
             &::after,
