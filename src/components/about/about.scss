@@ -1,0 +1,62 @@
+@use 'styles/utils';
+
+.about {
+    &.section {
+        margin-top: 100px;
+
+        .container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__title {
+        padding-left: 276px;
+
+        &-wrapper {
+            margin-bottom: 50px;
+            padding-left: 276px;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 30px;
+
+        &::first-letter {
+            padding-left: 276px;
+        }
+    }
+
+    &__body {
+        display: flex;
+    }
+
+    &__image {
+        object-fit: cover;
+        object-position: center;
+        margin-right: 51px;
+        width: 502px;
+        height: 434px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        &-title {
+            margin-bottom: 18px;
+            font: 3rem/1.33 var(--mozer);
+            text-transform: uppercase;
+        }
+
+        &-content {
+            gap: 18px;
+            display: flex;
+            font: 1.6rem/1.37 var(--roboto-regular);
+            opacity: 0.9;
+        }
+    }
+
+    &__button {
+        margin-top: auto;
+    }
+}
