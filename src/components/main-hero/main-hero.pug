@@ -31,26 +31,37 @@ include layout/utils
             buttonLink: '/portfolio'
         },
     ]
-
-.main-hero.swiper
-    .swiper-wrapper
-        each item, i in slides
-            .main-hero__slide.swiper-slide
-                +img(item.image).main-hero__slide-image
-                .main-hero__slide-content
-                    if i === 0
-                        h1.main-hero__slide-title= item.title
-                    else
-                        .main-hero__slide-title= item.title
-                    .main-hero__slide-subtitle= item.subTitle
-                    if item.buttonLink
-                        +anchor(item.buttonLink).button.button--accent_100.main-hero__slide-button= item.buttonText
-                    else
-                        button.button.button--accent_100.main-hero__slide-button(
-                            data-action='popup',
-                            data-popup='call-popup'
-                        )= item.buttonText
-    .main-hero__info
+.main-hero__wrapper
+    .main-hero.swiper
+        .swiper-wrapper
+            each item, i in slides
+                .main-hero__slide.swiper-slide
+                    +img(item.image).main-hero__slide-image
+                    .main-hero__slide-content
+                        if i === 0
+                            h1.main-hero__slide-title= item.title
+                        else
+                            .main-hero__slide-title= item.title
+                        .main-hero__slide-subtitle= item.subTitle
+                        if item.buttonLink
+                            +anchor(item.buttonLink).button.button--accent_100.main-hero__slide-button= item.buttonText
+                        else
+                            button.button.button--accent_100.main-hero__slide-button(
+                                data-action='popup',
+                                data-popup='call-popup'
+                            )= item.buttonText
+        .main-hero__info
+            .main-hero__info-item
+                span 16+
+                span лет опыта работы в индустрии телевизионного и сценического продакшна
+            .main-hero__info-item
+                span 50+
+                span реализованных проектов от федеральных телеканалов до частных студий
+            .main-hero__info-item
+                span 150+
+                span корпоративных клиентов
+        .main-hero__pagination
+    .main-hero__info._mobile
         .main-hero__info-item
             span 16+
             span лет опыта работы в индустрии телевизионного и сценического продакшна
@@ -60,4 +71,3 @@ include layout/utils
         .main-hero__info-item
             span 150+
             span корпоративных клиентов
-    .main-hero__pagination

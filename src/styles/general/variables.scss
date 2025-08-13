@@ -30,4 +30,12 @@
         brightness(87%) contrast(88%);
     --filter-accent_200: brightness(0) saturate(100%) invert(39%) sepia(99%) saturate(331%) hue-rotate(347deg)
         brightness(99%) contrast(85%);
+
+    @media screen and (max-width: 1000px) {
+        --text-base_100: 1.2rem/1.33 var(--roboto-regular);
+        --text-base_200: 1.4rem/1.3 var(--roboto-regular);
+        --text-base_300: 2.8rem/1.2 var(--mozer);
+        --header-base_100: 3.8rem/0.98 var(--mozer);
+        --header-base_200: 3.2rem/1.1 var(--mozer);
+    }
 }

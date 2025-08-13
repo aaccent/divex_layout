@@ -33,7 +33,7 @@
     &::before {
         content: '';
         @include utils.square(24px);
-        @include utils.bg-defaults(auto);
+        @include utils.bg-defaults(cover);
         filter: var(--filterColor);
         position: absolute;
         z-index: 1;
@@ -69,5 +69,22 @@
         --mainColor: var(--base_100);
         --hoverColor: var(--accent_200);
         --filterColor: var(--filter-base_100);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .button {
+        height: 40px;
+        font-size: 1.4rem;
+
+        &::after {
+            width: 38px;
+            height: 38px;
+        }
+
+        &::before {
+            @include utils.square(20px);
+            right: 12px;
+        }
     }
 }

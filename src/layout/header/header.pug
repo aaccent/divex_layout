@@ -32,6 +32,8 @@ header.header
                 +img(require('assets/icons/tg.svg'))
             +anchor('').header__wa
                 +img(require('assets/icons/wa.svg'))
+        .header-menu__burger._mobile
+            +img(require('assets/icons/burger.svg'))
     .header-menu
         .header-menu__wrapper
             +img(require('assets/icons/burger.svg')).header-menu__burger
@@ -41,6 +43,13 @@ header.header
                 +anchor('').header__wa
                     +img(require('assets/icons/wa.svg'))
             .header-menu__content
+                .header__messagers._mobile
+                    +anchor('').header__tg
+                        +img(require('assets/icons/tg.svg'))
+                    +anchor('').header__wa
+                        +img(require('assets/icons/wa.svg'))
+                .header-menu__burger._mobile
+                    +img(require('assets/icons/close.svg'))
                 +img(require('assets/icons/logo.svg')).header__logo
                 ul.header-menu__list
                     each item in menu

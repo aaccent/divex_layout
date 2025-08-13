@@ -31,17 +31,24 @@
     }
 
     &__tel {
-        font: 2.4rem/1.17 var(--roboto-semibold);
+        font-family: var(--roboto-semibold);
+        font-size: 2.4rem;
+        line-height: 117%;
     }
 
     &__mail {
-        font: 1.6rem/1.5 var(--roboto-regular);
+        font-family: var(--roboto-regular);
+        font-size: 1.6rem;
+        line-height: 150%;
     }
 
     &__messagers {
         gap: 14px;
         display: flex;
         align-items: center;
+        &._mobile {
+            display: none;
+        }
 
         img {
             @include utils.square(38px);
@@ -80,6 +87,10 @@
         &__burger {
             width: 24px;
             cursor: pointer;
+
+            &._mobile {
+                display: none;
+            }
         }
 
         &__messagers {
@@ -117,7 +128,9 @@
         }
 
         &__item {
-            font: 2rem/1.4 var(--roboto-regular);
+            font-family: var(--roboto-regular);
+            font-size: 2rem;
+            line-height: 140%;
 
             a {
                 display: block;
@@ -161,7 +174,9 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            font: 1.8rem/1.33 var(--roboto-light);
+            font-family: var(--roboto-light);
+            font-size: 1.8rem;
+            line-height: 133%;
             opacity: 0;
             visibility: hidden;
             transition: all 300ms linear;
@@ -177,6 +192,80 @@
 
         &__button {
             margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        .container {
+            position: relative;
+            margin-left: 0;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        &__logo {
+            object-fit: cover;
+            object-position: center;
+            width: 192px;
+            height: 38px;
+        }
+
+        &__contacts,
+        &__messagers {
+            display: none;
+        }
+
+        &-menu {
+            translate: -100%;
+
+            &__burger {
+                &._mobile {
+                    @include utils.square(42px);
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--accent_100);
+                    border-radius: 4px;
+                }
+            }
+
+            &__content {
+                padding: 16px 20px;
+                width: 100svw;
+                border-left: none;
+            }
+
+            &__contacts {
+                display: flex;
+            }
+
+            &__item {
+                font-size: 1.6rem;
+            }
+
+            &__sub-item {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__messagers._mobile {
+            position: absolute;
+            right: 22px;
+            bottom: 92px;
+            display: flex;
+        }
+
+        &__tel {
+            font-size: 2rem;
+        }
+
+        &__mail {
+            font-size: 1.4rem;
         }
     }
 }
