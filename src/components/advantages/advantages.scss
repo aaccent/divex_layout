@@ -25,13 +25,16 @@
         font-size: 1.6rem;
         line-height: 137%;
         text-transform: none;
+        opacity: 0.9;
     }
 
     &__list {
-        gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
-        margin-top: 32px;
-        display: grid;
+        .swiper-wrapper {
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 32px;
+            display: grid;
+        }
     }
 
     &__item {
@@ -67,6 +70,58 @@
             font-family: var(--roboto-regular);
             font-size: 1.6rem;
             line-height: 137%;
+            opacity: 0.8;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .advantages {
+        padding-right: 0;
+
+        .container {
+            padding-top: 0;
+        }
+
+        &__title {
+            margin-bottom: 12px;
+
+            &-wrapper {
+                padding-right: 20px;
+                flex-direction: column;
+            }
+        }
+
+        &__text {
+            margin-top: 28px;
+            font-size: 1.4rem;
+        }
+
+        &__list {
+            .swiper-wrapper {
+                gap: 0;
+                margin-top: 18px;
+                display: flex;
+            }
+        }
+
+        &__item {
+            padding: 16px;
+            height: 280px;
+
+            &-icon {
+                @include utils.square(58px);
+                margin-bottom: 34px;
+            }
+
+            &-title {
+                margin-bottom: 12px;
+                font-size: 2.4rem;
+            }
+
+            &-description {
+                font-size: 1.4rem;
+            }
         }
     }
 }

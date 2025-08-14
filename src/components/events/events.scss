@@ -165,3 +165,97 @@
         margin-top: 32px;
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .events {
+        .container {
+            flex-direction: column;
+        }
+
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        &__subtitle {
+            margin-bottom: 28px;
+        }
+
+        &__list {
+            li:not(:first-child) {
+                margin-top: -15px;
+            }
+        }
+
+        &__item {
+            padding: 18px 16px;
+            height: fit-content;
+            flex-direction: column;
+
+            &-title {
+                width: 100%;
+            }
+
+            &-min {
+                margin: 12px 0;
+                padding: 3px 10px;
+                flex-direction: row;
+                font-family: var(--roboto-regular);
+                font-size: 1.3rem;
+                line-height: 138%;
+                text-wrap: nowrap;
+                opacity: 1;
+                visibility: visible;
+                background-color: var(--accent_100);
+                border-radius: 4px;
+                border: none;
+
+                span {
+                    font-size: 1.3rem;
+                    line-height: 138%;
+                    text-transform: lowercase;
+                }
+            }
+
+            &-description {
+                -webkit-line-clamp: 2;
+                width: 230px;
+                line-height: 142%;
+                opacity: 0.6;
+            }
+
+            &-info {
+                margin-bottom: 18px;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            &.accent_100 {
+                background-color: var(--accent_100);
+
+                .events__item-min {
+                    background-color: var(--accent_200);
+                }
+            }
+
+            &.accent_200 {
+                background-color: var(--accent_200);
+            }
+
+            &.dark {
+                background-color: #343636;
+            }
+
+            &-image {
+                display: none;
+            }
+
+            &-arrow {
+                @include utils.square(44px);
+                position: absolute;
+                right: 16px;
+                bottom: 28px;
+                margin: 0;
+            }
+        }
+    }
+}

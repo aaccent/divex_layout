@@ -40,5 +40,5 @@ include layout/utils
         .clients__subtitle.section__subtitle Нам доверяют те, кто не может позволить себе ошибку — в эфире, на сцене, в продакшене
     .clients__list
         each item in clients
-            .clients__item(style=`grid-column:span ${item.span || 1}; place-self:${item.position || 'start'}`)
+            .clients__item(class=`${item.span ? `span-${item.span}` : ''} ${item.position || 'start'}`)
                 +img(item.icon).clients__item-icon

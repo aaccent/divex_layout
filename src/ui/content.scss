@@ -12,6 +12,9 @@
     }
 
     @media only screen and (max-width: 1000px) {
+        p {
+            font-size: 1.4rem;
+        }
         p + p {
             margin-top: 12px;
         }

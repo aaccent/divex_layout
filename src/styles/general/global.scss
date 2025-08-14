@@ -101,6 +101,18 @@ html {
     @media screen and (max-width: 1000px) {
         margin-top: 70px;
         padding: 0 20px;
+
+        &__title {
+            font-size: 1.2rem;
+        }
+
+        &.gradient-transparent {
+            height: 908px;
+
+            & + .form-block {
+                margin-top: 0;
+            }
+        }
     }
 }
 

@@ -37,3 +37,24 @@
         width: 292px;
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .seo {
+        padding-bottom: 70px;
+        &__title {
+            margin-bottom: 12px;
+            &-wrapper {
+                margin-bottom: 28px;
+                flex-direction: column;
+            }
+        }
+
+        &__body {
+            padding: 0;
+        }
+
+        &__content {
+            -webkit-line-clamp: 19;
+        }
+    }
+}

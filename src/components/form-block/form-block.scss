@@ -68,6 +68,7 @@
         font-family: var(--roboto-regular);
         font-size: 1.6rem;
         line-height: 137%;
+        opacity: 0.9;
     }
 
     form {
@@ -86,5 +87,47 @@
         font-size: 1.4rem;
         line-height: 142%;
         opacity: 0.5;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .form-block {
+        .container {
+            padding: 18px;
+            height: 502px;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+
+        &__content,
+        &__content--thx {
+            top: 46px;
+            right: auto;
+            left: 0;
+            padding: 0 18px;
+            max-width: fit-content;
+        }
+
+        &__title {
+            margin-bottom: 22px;
+            font-size: 3.2rem;
+        }
+
+        &__text {
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+        }
+
+        form {
+            gap: 10px;
+            .input {
+                width: 100%;
+            }
+        }
+
+        &__policy {
+            margin-top: 10px;
+            font-size: 1.3rem;
+        }
     }
 }

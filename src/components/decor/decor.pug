@@ -7,7 +7,7 @@ include layout/utils
             icon: require('assets/icons/decorations/table.svg'),
             image: require('assets/content/decor/1.jpg'),
             title: 'СТОЛ ВЕДУЩЕГО ДЛЯ ТЕЛЕСТУДИИ',
-            description: 'Представляем вам высококачественные ТВ столы для различных телевизионных проектов. Наши изделия отличаются современным дизайном и функциональностью, соответствуя самым высоким стандартам качества материалов.',
+            description: 'Представляем вам высококачественные ТВ столы для различных телевизионных проектов. Наши изделия отличаются современным дизайном и функциональностью, соответствуя самым высоким стандартам качества материалов.'
 
         },
         {
@@ -15,7 +15,7 @@ include layout/utils
             icon: require('assets/icons/decorations/tv-decor.svg'),
             image: require('assets/content/decor/2.jpg'),
             title: 'ДЕКОРАЦИИ ДЛЯ ТЕЛЕВИДЕНИЯ',
-            description: 'Мы обладаем широкими возможностями для изготовления декораций для телевидения, которые помогут создать нужную атмосферу и образ на экране. ',
+            description: 'Мы обладаем широкими возможностями для изготовления декораций для телевидения, которые помогут создать нужную атмосферу и образ на экране. '
         }, {
             className: 'accent-200',
             icon: require('assets/icons/decorations/backdrop.svg'),
@@ -47,14 +47,15 @@ include layout/utils
     .decor__title-wrapper
         h2.decor__title.section__title ТВ декорации
         .decor__subtitle.section__subtitle Архитектура кадра: профессиональные декорации для ТВ
-    ul.decor__list
-        each item in list
-            li
-                +anchor.decor__item(class=item.className)
-                    +img(item.image).decor__item-image
-                    +img(item.icon).decor__item-icon
-                    .decor__item-title= item.title
-                    .decor__item-description= item.description
-                    -
-                        var className = item.className==='dark' ? 'button--accent_100' : item.className==='accent-200' ? 'button--base-accent_200' : ''
-                    .decor__item-button.button(href='')(class=className) Узнать больше
+    ul.decor__list.swiper
+        .swiper-wrapper
+            each item in list
+                li.swiper-slide
+                    +anchor.decor__item(class=item.className)
+                        +img(item.image).decor__item-image
+                        +img(item.icon).decor__item-icon
+                        .decor__item-title= item.title
+                        .decor__item-description= item.description
+                        -
+                            var className = item.className==='dark' ? 'button--accent_100' : item.className==='accent-200' ? 'button--base-accent_200' : ''
+                        .decor__item-button.button(href='')(class=className) Узнать больше
