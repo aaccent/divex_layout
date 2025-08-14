@@ -1,4 +1,5 @@
 extends layout/page
+include layout/utils
 
 block append head
 
@@ -7,7 +8,8 @@ block append main
     include components/decor/decor
     include components/events/events
     include components/about/about
-    include components/advantages/advantages
+    +section.gradient-reverse.advantages
+        include components/advantages/advantages
     include components/clients/clients
     include components/form-block/form-block
     include components/seo/seo

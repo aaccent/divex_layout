@@ -1,0 +1,13 @@
+include layout/utils
+
+mixin breadcrumbs(props)
+    -
+        props = props.concat([])
+
+    .breadcrumbs
+        +anchor('/').breadcrumbs__item Главная
+        each item, index in props
+            if index === props.length-1
+                .breadcrumbs__item= item
+            else
+                +anchor('').breadcrumbs__item= item

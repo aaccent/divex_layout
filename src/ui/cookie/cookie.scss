@@ -1,0 +1,43 @@
+@use 'styles/utils';
+
+.cookie {
+    position: fixed;
+    z-index: 10;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 54px;
+    width: 100%;
+    max-width: 723px;
+    display: none;
+    background-color: var(--accent_200);
+    border-radius: 20px;
+
+    &__title {
+        margin-bottom: 34px;
+        font: var(--text-base_300);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-bottom: 24px;
+        font: var(--text-base_200);
+        opacity: 0.9;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cookie {
+        padding: 16px;
+        max-width: 320px;
+
+        &__title {
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+    }
+}

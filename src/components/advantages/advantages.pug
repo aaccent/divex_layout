@@ -24,15 +24,15 @@ include layout/utils
         },
     ]
 
-+section.gradient-reverse.advantages
-    .advantages__title-wrapper
-        h2.advantages__title.section__title Наши преимущества
-        .advantages__subtitle.section__subtitle Не просто опыт — системный подход к каждой задаче
-            .advantages__text С нами легко выстраивать процессы: мы быстро вникаем в задачу, предлагаем оптимальные решения и сопровождаем проект до самого конца. Наши клиенты знают, что мы не бросаем на полпути, умеем слушать и точно следуем техническим требованиям.
-    .advantages__list.swiper
-        .swiper-wrapper
-            each item in list
-                .advantages__item.swiper-slide
-                    +img(item.icon).advantages__item-icon
-                    .advantages__item-title= item.title
-                    .advantages__item-description= item.description
+
+.advantages__title-wrapper
+    h2.advantages__title.section__title Наши преимущества
+    .advantages__subtitle.section__subtitle Не просто опыт — системный подход к каждой задаче
+        .advantages__text С нами легко выстраивать процессы: мы быстро вникаем в задачу, предлагаем оптимальные решения и сопровождаем проект до самого конца. Наши клиенты знают, что мы не бросаем на полпути, умеем слушать и точно следуем техническим требованиям.
+.advantages__list.swiper
+    .swiper-wrapper
+        each item in list
+            .advantages__item.swiper-slide
+                +img(item.icon).advantages__item-icon
+                .advantages__item-title= item.title
+                .advantages__item-description= item.description

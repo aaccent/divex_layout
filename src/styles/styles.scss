@@ -15,12 +15,14 @@
 @use 'features/popup/popup';
 @use 'ui/popups/call-popup/call-popup';
 @use 'ui/popups/thx-popup/thx-popup';
+@use 'ui/cookie/cookie';
 
 // Ui
 @use 'ui/buttons/close-btn';
 @use 'ui/buttons/button';
 @use 'ui/input';
 @use 'ui/content';
+@use 'ui/breadcrumbs/breadcrumbs';
 
 // Page
 @use 'layout/header/header';
@@ -35,3 +37,5 @@
 @use 'components/about/about';
 @use 'components/advantages/advantages';
 @use 'components/seo/seo';
+@use 'components/page-hero/page-hero';
+@use 'components/service-content/service-content';

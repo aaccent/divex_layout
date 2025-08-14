@@ -5,6 +5,7 @@
         font-family: var(--roboto-regular);
         font-size: 1.6rem;
         line-height: 137%;
+        opacity: 0.9;
     }
 
     p + p {
@@ -17,6 +18,128 @@
         }
         p + p {
             margin-top: 12px;
+        }
+    }
+
+    blockquote {
+        position: relative;
+        margin-bottom: 34px;
+        padding-left: 24px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent_100);
+        }
+
+        p {
+            margin-bottom: 12px;
+            font-family: var(--mozer);
+            font-size: 3rem;
+            line-height: 133%;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        figcaption {
+            grid-template-columns: 54px auto;
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 4px;
+            column-gap: 14px;
+            display: grid;
+
+            img {
+                grid-row: span 2;
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 54px;
+                border-radius: 100%;
+            }
+
+            p {
+                margin: 0;
+                font-family: var(--roboto-regular);
+                font-size: 1.6rem;
+                line-height: 125%;
+                text-transform: none;
+            }
+
+            p + p {
+                font-family: var(--roboto-light);
+                font-size: 1.5rem;
+                line-height: 133%;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    h3 {
+        margin-bottom: 18px;
+        font: var(--text-base_300);
+        letter-spacing: -0.01rem;
+        text-transform: uppercase;
+    }
+
+    h4 {
+        margin-bottom: 12px;
+        font-family: var(--mozer);
+        font-size: 3rem;
+        letter-spacing: -0.01rem;
+        line-height: 127%;
+        text-transform: uppercase;
+    }
+
+    ol,
+    ul {
+        gap: 8px;
+        margin-bottom: 18px;
+        display: flex;
+        flex-direction: column;
+        font: var(--text-base_100);
+        opacity: 0.9;
+        list-style-position: inside;
+        list-style-type: decimal;
+
+        li::marker {
+            color: var(--accent_100);
+        }
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .content {
+        blockquote {
+            p {
+                margin-bottom: 8px;
+                font-size: 2rem;
+            }
+
+            figcaption {
+                grid-template-columns: 44px auto;
+                row-gap: 2px;
+
+                img {
+                    height: 44px;
+                }
+            }
+        }
+
+        ol,
+        ul {
+            font-size: 1.4rem;
+        }
+
+        h4 {
+            font-size: 2rem;
         }
     }
 }

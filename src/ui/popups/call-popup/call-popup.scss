@@ -33,3 +33,30 @@
         opacity: 0.5;
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .call-popup {
+        &__inner {
+            padding: 16px;
+        }
+
+        &__title {
+            margin-bottom: 22px;
+            font-size: 2.8rem;
+        }
+
+        &__text {
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+        }
+
+        &__form {
+            gap: 10px;
+        }
+
+        &__policy {
+            margin-top: 10px;
+            font-size: 1.3rem;
+        }
+    }
+}

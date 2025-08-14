@@ -28,3 +28,22 @@
         margin-top: auto;
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .thx-popup {
+        &__inner {
+            padding: 16px;
+            height: fit-content;
+        }
+
+        &__title {
+            margin-bottom: 22px;
+            font-size: 2.8rem;
+        }
+
+        &__text {
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+include layout/utils
+
+mixin pageHero(props)
+    -
+        props = Object.assign({
+            image: require('assets/content/category.png'),
+            title: 'Оформление пространства  для ТВ и съёмок',
+            description: 'Телевизионная студия, Дизайн телестудии, Оформление телестудии, Оформление студии новостей, Декорации для шоу, Декорации для ТВ, Декорации для телестудии'
+        }, props || {})
+    +section({container:false}).page-hero
+        +img(props.image).page-hero__image
+        .page-hero__content
+            h1.page-hero__title.page__title= props.title
+            .page-hero__description= props.description
+            button.page-hero__button.button.button--accent_100(data-action='popup', data-popup='call-popup') Получить консультацию

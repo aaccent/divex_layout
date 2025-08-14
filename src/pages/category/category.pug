@@ -1,0 +1,15 @@
+extends layout/page
+include components/page-hero/page-hero
+include layout/utils/section
+
+block append head
+
+block append main
+    +pageHero
+    +section.service-content.gradient
+        include components/service-content/service-content
+    +section.gradient-reverse.advantages
+        include components/advantages/advantages
+    include components/decor/decor
+
+block append scripts
