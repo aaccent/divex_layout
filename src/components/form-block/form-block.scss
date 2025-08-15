@@ -1,6 +1,8 @@
 @use 'styles/utils';
 
 .form-block {
+    padding: 0 94px 0 190px;
+
     &:has(form._success) {
         .form-block__content--thx {
             opacity: 1;
@@ -92,6 +94,7 @@
 
 @media only screen and (max-width: 1000px) {
     .form-block {
+        padding: 20px 20px 0;
         .container {
             padding: 18px;
             height: 502px;

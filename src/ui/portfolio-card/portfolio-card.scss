@@ -1,0 +1,119 @@
+@use 'styles/utils';
+
+.portfolio-card {
+    position: relative;
+    padding: 16px;
+    width: 395px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    background-color: #343636;
+    border-radius: 10px;
+
+    &._decor {
+        .portfolio-card__tags-item--category {
+            background-color: var(--accent_100);
+        }
+    }
+
+    &._event {
+        .portfolio-card__tags-item--category {
+            background-color: var(--accent_200);
+        }
+    }
+
+    &__tags {
+        gap: 6px;
+        position: absolute;
+        top: 28px;
+        right: 28px;
+        left: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: var(--roboto-regular);
+        font-size: 1.4rem;
+        line-height: 142%;
+
+        &-item {
+            backdrop-filter: blur(4px);
+            padding: 7px 16px;
+            background-color: hsla(180, 14%, 1%, 0.6);
+            border-radius: 4px;
+        }
+    }
+
+    &__image {
+        object-position: center;
+        object-fit: cover;
+        margin-bottom: 16px;
+        height: 252px;
+        border-radius: 6px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        font-family: var(--mozer);
+        font-size: 3rem;
+        letter-spacing: -0.01rem;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        font-family: var(--roboto-regular);
+        font-size: 1.6rem;
+        line-height: 137%;
+        opacity: 0.8;
+    }
+
+    &__link {
+        margin-top: auto;
+        display: block;
+        color: var(--accent_200);
+        font-family: var(--roboto-medium);
+        font-size: 1.7rem;
+        line-height: 142%;
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .portfolio-card {
+        padding: 14px;
+        width: 300px;
+        height: 394px;
+        border-radius: 8px;
+
+        &__tags {
+            top: 22px;
+            left: 22px;
+        }
+
+        &__tags-item {
+            padding: 4px 12px;
+            font-size: 1.3rem;
+        }
+
+        &__image {
+            margin-bottom: 14px;
+            height: 192px;
+            border-radius: 4px;
+        }
+
+        &__title {
+            font-size: 2.6rem;
+        }
+
+        &__description {
+            font-size: 1.4rem;
+        }
+
+        &__link {
+            font-size: 1.5rem;
+        }
+    }
+}

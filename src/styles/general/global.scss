@@ -8,21 +8,29 @@ html {
 
 .container {
     margin: 0 auto;
+    padding: 0 94px 0 190px;
     width: 100%;
-    max-width: 1636px;
 
     @media screen and (max-width: 1000px) {
+        padding: 0 20px;
     }
 }
 
 .section {
-    margin-top: 160px;
-    padding: 0 94px 0 190px;
+    margin: 160px 0;
+
+    &:has(+ .gradient),
+    &:has(+ .gradient-reverse),
+    &:has(+ .gradient-transparent),
+    &:has(+ .gradient-double) {
+        margin-bottom: 0;
+    }
 
     &:first-child,
     &.gradient,
     &.gradient-reverse,
-    &.gradient-transparent {
+    &.gradient-transparent,
+    &.gradient-double {
         margin-top: 0;
     }
 
@@ -40,7 +48,6 @@ html {
 
     &.gradient-transparent {
         position: relative;
-        height: 926px;
 
         .container {
             position: relative;
@@ -103,16 +110,13 @@ html {
     }
 
     @media screen and (max-width: 1000px) {
-        margin-top: 70px;
-        padding: 0 20px;
+        margin: 70px 0;
 
         &__title {
             font-size: 1.2rem;
         }
 
         &.gradient-transparent {
-            height: 908px;
-
             & + .form-block {
                 margin-top: 0;
             }

@@ -125,7 +125,9 @@
 
 @media only screen and (max-width: 1000px) {
     .decor {
-        padding-right: 0;
+        .container {
+            padding-right: 0;
+        }
 
         &__title {
             margin-bottom: 12px;

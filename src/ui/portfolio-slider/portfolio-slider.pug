@@ -1,0 +1,54 @@
+include layout/utils
+-
+    var list = [
+        {
+            title: 'LATINO ЧАРТ',
+            tag: 'Стол ведущего для телестудии',
+            image: require('assets/content/portfolio/1.png'),
+            description: 'Оформление телестудии Latino ЧАРТ для канала «Жара» трансляция которой идет в Интернет сети!',
+        },
+        {
+            title: 'ГРАНИЦЫ ПОЗНАНИЯ',
+            tag: 'Декорации для телевидения',
+            image: require('assets/content/portfolio/2.png'),
+            description: 'Музыкальный телеканал ЖАРА - это развлекательное телевидение нового поколения. Амбициозный канал для современного поколения. В программе Latino ЧАРТ транслируются самые топовые хиты Латинской Америки.',
+        },
+        {
+            title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+            tag: 'Задник для ТВ программы',
+            image: require('assets/content/portfolio/3.png'),
+            description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+        },
+        {
+            title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+            tag: 'Декорации для телестудии',
+            image: require('assets/content/portfolio/4.png'),
+            description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+        },
+        {
+            title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+            tag: 'Задник для ТВ программы',
+            image: require('assets/content/portfolio/3.png'),
+            description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+        },
+        {
+            title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+            tag: 'Декорации для телестудии',
+            image: require('assets/content/portfolio/4.png'),
+            description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+        },
+
+    ]
+
++section.portfolio-slider
+    .portfolio-slider__title-wrapper
+        h2.portfolio-slider__title.section__title Реализованные проекты
+        .portfolio-slider__subtitle.section__subtitle Проекты, за которыми стоят идеи, опыт и настоящая команда профессионалов
+    .portfolio-slider__container
+        .swiper
+            .swiper-wrapper
+                each item in list
+                    +portfolioCard(item).swiper-slide
+        .portfolio-slider__navigation.portfolio-slider__navigation-next
+        .portfolio-slider__navigation.portfolio-slider__navigation-prev
+    +anchor.portfolio-slider__link.button.button--accent_100 Все кейсы

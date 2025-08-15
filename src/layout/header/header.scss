@@ -4,10 +4,10 @@
     position: absolute;
     z-index: 100;
     top: 0;
-    width: 100%;
+    right: 94px;
+    left: 190px;
 
     .container {
-        margin-left: 190px;
         padding: 26px 0 20px;
         display: flex;
         align-items: center;
@@ -198,6 +198,8 @@
 
 @media screen and (max-width: 1000px) {
     .header {
+        right: 0;
+        left: 0;
         .container {
             position: relative;
             margin-left: 0;

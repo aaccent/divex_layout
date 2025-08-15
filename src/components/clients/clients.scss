@@ -1,8 +1,8 @@
 @use 'styles/utils';
 
 .clients {
-    .container {
-        padding: 80px 0;
+    &.section {
+        padding-top: 80px;
     }
 
     &__title-wrapper {
@@ -65,6 +65,9 @@
 
 @media only screen and (max-width: 1000px) {
     .clients {
+        &.section {
+            padding-top: 0;
+        }
         .container {
             padding-top: 0;
             padding-bottom: 0;

@@ -113,6 +113,12 @@
     ul {
         list-style-type: disc;
     }
+
+    ul:last-child,
+    ol:last-child,
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (max-width: 1000px) {

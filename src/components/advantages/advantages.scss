@@ -1,8 +1,11 @@
 @use 'styles/utils';
 
 .advantages {
-    .container {
+    &.section {
         margin-bottom: 80px;
+    }
+
+    .container {
         padding-top: 80px;
     }
 
@@ -78,6 +81,10 @@
 @media only screen and (max-width: 1000px) {
     .advantages {
         padding-right: 0;
+
+        .container {
+            padding-right: 0;
+        }
 
         .container {
             padding-top: 0;
