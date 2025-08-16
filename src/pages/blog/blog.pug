@@ -1,0 +1,116 @@
+extends layout/page
+include layout/utils
+include ui/breadcrumbs/breadcrumbs
+include ui/tabs/tabs
+include ui/portfolio/list/list
+include ui/selector/selector
+
+block append head
+
+block append main
+    -
+        var blogList = [
+            {
+                title: 'LATINO ЧАРТ',
+                image: require('assets/content/portfolio/1.png'),
+                description: 'Оформление телестудии Latino ЧАРТ для канала «Жара» трансляция которой идет в Интернет сети!',
+                category: 'article',
+                date: '01.01.2025'
+            },
+            {
+                title: 'ГРАНИЦЫ ПОЗНАНИЯ',
+                image: require('assets/content/portfolio/2.png'),
+                description: 'Музыкальный телеканал ЖАРА - это развлекательное телевидение нового поколения. Амбициозный канал для современного поколения. В программе Latino ЧАРТ транслируются самые топовые хиты Латинской Америки.',
+                category: 'news',
+                date: '01.01.2025'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'news',
+                date: '01.01.2025'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'article',
+                date: '01.01.2025'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'news',
+                date: '01.01.2025'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'article',
+                date: '01.01.2025'
+            },
+            {
+                title: 'LATINO ЧАРТ',
+                image: require('assets/content/portfolio/1.png'),
+                description: 'Оформление телестудии Latino ЧАРТ для канала «Жара» трансляция которой идет в Интернет сети!',
+                category: 'article',
+                date: '01.01.2025'
+            },
+            {
+                title: 'ГРАНИЦЫ ПОЗНАНИЯ',
+                image: require('assets/content/portfolio/2.png'),
+                description: 'Музыкальный телеканал ЖАРА - это развлекательное телевидение нового поколения. Амбициозный канал для современного поколения. В программе Latino ЧАРТ транслируются самые топовые хиты Латинской Америки.',
+                category: 'article',
+                date: '01.01.2025'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'news',
+                date: '01.01.2025'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'article',
+                date: '01.01.2025'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'news',
+                date: '01.01.2025'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'news',
+                date: '01.01.2025'
+            },
+
+
+        ]
+    +section.blog
+        +breadcrumbs(['Блог'])
+        .page__title Блог
+        .page__controls
+            +tabs([{name: 'Все', active: true}, {name: 'Статьи'},{name: 'Новости'}])
+            .page__sort
+                span Сортировка
+                +selector(['по популярности', 'по дате']).selector__header
+        +portfolioList(blogList)
+        .page__controls
+            include ui/_pagination/_pagination
+            .page__sort
+                span Показыть
+                +selector(['12 на странице', '24 на странице', '32 на странице'])
+    include components/form-block/form-block
+
+block append scripts

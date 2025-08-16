@@ -26,12 +26,20 @@
             }
         }
     }
+
+    &:has(+ .page__title) {
+        margin-bottom: 40px;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     .breadcrumbs {
         &__item {
             font-size: 1.3rem;
+        }
+
+        &:has(+ .page__title) {
+            margin-bottom: 16px;
         }
     }
 }

@@ -10,18 +10,6 @@
     background-color: #343636;
     border-radius: 10px;
 
-    &._decor {
-        .portfolio-card__tags-item--category {
-            background-color: var(--accent_100);
-        }
-    }
-
-    &._event {
-        .portfolio-card__tags-item--category {
-            background-color: var(--accent_200);
-        }
-    }
-
     &__tags {
         gap: 6px;
         position: absolute;
@@ -39,6 +27,16 @@
             padding: 7px 16px;
             background-color: hsla(180, 14%, 1%, 0.6);
             border-radius: 4px;
+
+            &--decor,
+            &--article {
+                background-color: var(--accent_100);
+            }
+
+            &--events,
+            &--news {
+                background-color: var(--accent_200);
+            }
         }
     }
 
@@ -57,6 +55,14 @@
         letter-spacing: -0.01rem;
         line-height: 120%;
         text-transform: uppercase;
+    }
+
+    &__date {
+        margin-bottom: 12px;
+        font-family: var(--roboto-light);
+        font-size: 1.4rem;
+        line-height: 137%;
+        opacity: 0.4;
     }
 
     &__description {

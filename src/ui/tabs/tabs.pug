@@ -1,0 +1,8 @@
+include layout/utils
+
+mixin tabs(props)
+    -
+        props=props.concat([])
+    .tabs
+        each tab in props
+            .tabs__item(class=tab.active ? '_active' : '')= tab.name

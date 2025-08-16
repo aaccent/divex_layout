@@ -1,6 +1,7 @@
 :root {
     --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji';
+    --header-height: 103px;
 
     //FONTS
     --roboto-regular: 'Roboto-Regular', var(--sans);
@@ -32,6 +33,8 @@
         brightness(99%) contrast(85%);
 
     @media screen and (max-width: 1000px) {
+        --header-height: 85px;
+
         --text-base_100: 1.2rem/1.33 var(--roboto-regular);
         --text-base_200: 1.4rem/1.3 var(--roboto-regular);
         --text-base_300: 2.8rem/1.2 var(--mozer);

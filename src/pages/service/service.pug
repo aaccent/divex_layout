@@ -1,7 +1,7 @@
 extends layout/page
 include components/page-hero/page-hero
 include layout/utils/section
-include ui/portfolio-card/portfolio-card
+include ui/portfolio/card/card
 
 block append head
 
@@ -9,7 +9,7 @@ block append main
     +pageHero
     +section.service-content.gradient-double
         include components/service-content/service-content
-    include ui/portfolio-slider/portfolio-slider
+    include ui/portfolio/slider/slider
     +section.advantages
         include components/advantages/advantages
     include components/form-block/form-block

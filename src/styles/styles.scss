@@ -1,10 +1,4 @@
-@use 'npm/swiper/swiper';
-@use 'npm/swiper/modules/navigation';
-@use 'npm/swiper/modules/pagination';
-@use 'npm/swiper/modules/effect-fade';
-@use 'npm/swiper/modules/autoplay';
-@use 'npm/swiper/modules/thumbs';
-
+@use 'swiper';
 @use 'general/_preflight.css';
 @use 'general/reset';
 @use 'general/variables';
@@ -23,12 +17,17 @@
 @use 'ui/input';
 @use 'ui/content';
 @use 'ui/breadcrumbs/breadcrumbs';
-@use 'ui/portfolio-card/portfolio-card';
-@use 'ui/portfolio-slider/portfolio-slider';
+@use 'ui/portfolio/card/card';
+@use 'ui/portfolio/slider/slider';
+@use 'ui/portfolio/list/list';
+@use 'ui/tabs/tabs';
+@use 'ui/_pagination/_pagination';
+@use 'ui/selector/selector';
 
 // Page
 @use 'layout/header/header';
 @use 'layout/footer/footer';
+@use 'pages/blog/blog';
 
 // Components
 @use 'components/clients/clients';

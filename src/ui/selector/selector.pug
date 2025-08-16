@@ -1,0 +1,11 @@
+include layout/utils
+
+mixin selector(props)
+    -
+        props = props.concat([])
+
+    .selector&attributes(attributes)
+        span= props[0]
+        ul.selector__list
+            each item in props
+                li.selector__item= item

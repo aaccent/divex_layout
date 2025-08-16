@@ -2,10 +2,9 @@ include layout/utils
 
 mixin breadcrumbs(props)
     -
-        props = props.concat([])
+        props = ['Главная'].concat(props)
 
     .breadcrumbs
-        +anchor('/').breadcrumbs__item Главная
         each item, index in props
             if index === props.length-1
                 .breadcrumbs__item= item

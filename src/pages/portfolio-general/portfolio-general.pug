@@ -1,0 +1,139 @@
+extends layout/page
+include layout/utils
+include ui/breadcrumbs/breadcrumbs
+include ui/tabs/tabs
+include ui/portfolio/list/list
+include ui/selector/selector
+
+block append head
+
+block append main
+    -
+        var list = [
+            {
+                title: 'LATINO ЧАРТ',
+                tag: 'Стол ведущего для телестудии',
+                image: require('assets/content/portfolio/1.png'),
+                description: 'Оформление телестудии Latino ЧАРТ для канала «Жара» трансляция которой идет в Интернет сети!',
+                category: 'decor'
+            },
+            {
+                title: 'ГРАНИЦЫ ПОЗНАНИЯ',
+                tag: 'Декорации для телевидения',
+                image: require('assets/content/portfolio/2.png'),
+                description: 'Музыкальный телеканал ЖАРА - это развлекательное телевидение нового поколения. Амбициозный канал для современного поколения. В программе Latino ЧАРТ транслируются самые топовые хиты Латинской Америки.',
+                category: 'decor'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                tag: 'Задник для ТВ программы',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'events'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                tag: 'Декорации для телестудии',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'decor'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                tag: 'Задник для ТВ программы',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'decor'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                tag: 'Декорации для телестудии',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'events'
+            },
+            {
+                title: 'LATINO ЧАРТ',
+                tag: 'Стол ведущего для телестудии',
+                image: require('assets/content/portfolio/1.png'),
+                description: 'Оформление телестудии Latino ЧАРТ для канала «Жара» трансляция которой идет в Интернет сети!',
+                category: 'events'
+            },
+            {
+                title: 'ГРАНИЦЫ ПОЗНАНИЯ',
+                tag: 'Декорации для телевидения',
+                image: require('assets/content/portfolio/2.png'),
+                description: 'Музыкальный телеканал ЖАРА - это развлекательное телевидение нового поколения. Амбициозный канал для современного поколения. В программе Latino ЧАРТ транслируются самые топовые хиты Латинской Америки.',
+                category: 'decor'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                tag: 'Задник для ТВ программы',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'decor'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                tag: 'Декорации для телестудии',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'decor'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                tag: 'Задник для ТВ программы',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'decor'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                tag: 'Декорации для телестудии',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'decor'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                tag: 'Задник для ТВ программы',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'decor'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                tag: 'Декорации для телестудии',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'events'
+            },
+            {
+                title: 'БОРОДИНА ПРОТИВ БУЗОВОЙ.  ДОМ 2',
+                tag: 'Задник для ТВ программы',
+                image: require('assets/content/portfolio/3.png'),
+                description: 'Для работы над оформлением студии для авторского научного шоу «Границы познания», которое вышло на наиболее популярном видеосервисе Okko, были привлечены лучшие специалисты нашей компании.',
+                category: 'decor'
+            },
+            {
+                title: 'ИНФОРМАЦИОННАЯ СТУДИЯ',
+                tag: 'Декорации для телестудии',
+                image: require('assets/content/portfolio/4.png'),
+                description: 'Компания Дивэкс изготовила декорации для нового шоу, в рамках проекта Дом 2 на ТНТ - Бородина против Бузовой.',
+                category: 'decor'
+            }
+
+        ]
+    +section.portfolio
+        +breadcrumbs(['Реализованные проекты'])
+        .page__title Реализованные проекты
+        +tabs([{name: 'Все', active: true}, {name: 'ТВ декорации'},{name: 'Оформление мероприятий'}])
+        +portfolioList(list)
+        .page__controls
+            include ../../ui/_pagination/_pagination
+            .page__sort
+                span Показывать
+                +selector(['16 на странице', '24 на странице', '32 на странице'])
+    include components/form-block/form-block
+
+block append scripts

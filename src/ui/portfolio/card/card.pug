@@ -4,7 +4,6 @@ mixin portfolioCard(props)
     -
         props = Object.assign({
             title: 'LATINO ЧАРТ',
-            tag: 'Стол ведущего для телестудии',
             image: require('assets/content/portfolio/1.png'),
             description: 'Оформление телестудии Latino ЧАРТ для канала «Жара» трансляция которой идет в Интернет сети! Музыкальный телеканал ЖАРА - это развлекательное телевидение нового поколения. Амбициозный канал для современного поколения. В программе Latino ЧАРТ транслируются самые топовые хиты Латинской Америки.',
         }, props || {})
@@ -12,10 +11,16 @@ mixin portfolioCard(props)
         ul.portfolio-card__tags
             if props.category
                 -
-                    var text = props.category === 'decor' ? 'ТВ декорации' : 'Оформление мероприятий'
-                li.portfolio-card__tags-item.portfolio-card__tags-item--category= text
-            li.portfolio-card__tags-item= props.tag
+                    var text = props.category === 'decor' ? 'ТВ декорации' :
+                            props.category === 'events' ? 'Оформление мероприятий' :
+                                    props.category === 'article' ? 'Статья' :
+                                            'Новости';
+                li.portfolio-card__tags-item(class=`portfolio-card__tags-item--${props.category}`)= text
+            if props.tag
+                li.portfolio-card__tags-item= props.tag
         +img(props.image).portfolio-card__image
+        if (props.date)
+            .portfolio-card__date= props.date
         .portfolio-card__title= props.title
         .portfolio-card__description= props.description
         +anchor.portfolio-card__link Подробнее о кейсе

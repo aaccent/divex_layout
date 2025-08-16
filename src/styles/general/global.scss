@@ -19,6 +19,11 @@ html {
 .section {
     margin: 160px 0;
 
+    &:first-child {
+        margin-top: var(--header-height);
+        padding-top: 40px;
+    }
+
     &:has(+ .gradient),
     &:has(+ .gradient-reverse),
     &:has(+ .gradient-transparent),
@@ -26,7 +31,6 @@ html {
         margin-bottom: 0;
     }
 
-    &:first-child,
     &.gradient,
     &.gradient-reverse,
     &.gradient-transparent,
@@ -169,4 +173,26 @@ html.disable-scroll {
 .swiper-wrapper,
 .swiper-slide {
     box-sizing: border-box !important;
+}
+
+.page__controls {
+    margin-top: 28px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page__sort {
+    display: flex;
+    align-items: center;
+    font: var(--text-base_100);
+}
+
+@media only screen and (max-width: 1000px) {
+    .page__sort span {
+        display: none;
+    }
+    .page__controls {
+        align-items: end;
+    }
 }

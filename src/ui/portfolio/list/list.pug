@@ -1,0 +1,8 @@
+include layout/utils
+include ui/portfolio/card/card
+
+mixin portfolioList(props)
+    - props = props.concat([])
+    .portfolio-list
+        each item in props
+            +portfolioCard(item)
