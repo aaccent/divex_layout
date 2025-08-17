@@ -19,40 +19,6 @@
         position: relative;
     }
 
-    &__navigation {
-        position: absolute;
-        @include utils.circle(54px);
-        z-index: 1;
-        top: 50%;
-        right: 0;
-        transform: translateX(50%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #343636;
-        border: 4px solid black;
-        transition: all 300ms linear;
-
-        &.swiper-button-disabled {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 300ms linear;
-        }
-
-        &::after {
-            content: '';
-            @include utils.square(24px);
-            @include utils.bg-defaults(cover);
-            filter: var(--filter-base_100);
-            background-image: url('assets/icons/arrow.svg');
-        }
-
-        &-prev {
-            left: 0;
-            rotate: 180deg;
-        }
-    }
-
     &__link {
         margin-top: 32px;
         width: 395px;
@@ -86,10 +52,6 @@
             margin-right: 20px;
             width: fit-content;
             min-width: 320px;
-        }
-
-        &__navigation {
-            display: none;
         }
     }
 }

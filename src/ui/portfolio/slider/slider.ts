@@ -10,8 +10,8 @@ void (function () {
         spaceBetween: 12,
         modules: [Navigation],
         navigation: {
-            nextEl: '.portfolio-slider__navigation-next',
-            prevEl: '.portfolio-slider__navigation-prev',
+            nextEl: '.portfolio-slider__navigation.slider-navigation._next',
+            prevEl: '.portfolio-slider__navigation.slider-navigation._prev',
         },
         breakpoints: {
             1000: {

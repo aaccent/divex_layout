@@ -1,0 +1,223 @@
+@use 'styles/utils';
+
+.contacts {
+    &__warning {
+        margin-top: 24px;
+        margin-bottom: 70px;
+        padding-left: 24px;
+        width: 100%;
+        max-width: 994px;
+        font: var(--text-base_200);
+        border-left: 4px solid var(--accent_100);
+    }
+
+    &__body {
+        gap: 20px;
+        display: flex;
+    }
+
+    &__info {
+        padding: 32px;
+        width: 100%;
+        background-color: hsl(180, 2%, 21%);
+        border-radius: 14px;
+
+        &:first-child {
+            max-width: 532px;
+        }
+    }
+
+    &__icon {
+        @include utils.square(78px);
+        object-position: center;
+        object-fit: cover;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        margin-bottom: 16px;
+        font-family: var(--mozer);
+        font-size: 3.8rem;
+        letter-spacing: -0.01rem;
+        line-height: 121%;
+        text-transform: uppercase;
+    }
+
+    &__tel {
+        margin-bottom: 4px;
+        font-family: var(--roboto-semibold);
+        font-size: 2.4rem;
+        line-height: 116%;
+    }
+
+    &__work-hours {
+        margin-bottom: 16px;
+        font-family: var(--roboto-light);
+        font-size: 1.6rem;
+        line-height: 150%;
+        opacity: 0.7;
+    }
+
+    &__mail {
+        margin-bottom: 16px;
+        display: block;
+        font: var(--text-base_100);
+        text-decoration: underline;
+    }
+    &__messagers {
+        gap: 14px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__address {
+        gap: 16px;
+        display: flex;
+
+        &-item {
+            width: 100%;
+            max-width: 243px;
+
+            p {
+                font-family: var(--roboto-light);
+                font-size: 1.4rem;
+                line-height: 157%;
+                opacity: 0.6;
+
+                & + p {
+                    margin-top: 16px;
+                    font: var(--text-base_100);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .form-block {
+        margin-top: 120px;
+        padding: 0;
+        &__content--thx {
+            height: 610px;
+        }
+
+        .container {
+            height: 780px;
+        }
+
+        form {
+            .input {
+                width: 32%;
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+            label {
+                gap: 8px;
+                position: relative;
+                padding: 8px 16px;
+                display: flex;
+                font: var(--text-base_100);
+                border-radius: 4px;
+                border: 1px solid hsla(0, 0%, 100%, 0.5);
+
+                &::before {
+                    content: '+';
+                }
+
+                input[type='file'] {
+                    inset: 0;
+                    position: absolute;
+                    opacity: 0;
+                }
+
+                &._changed {
+                    &::after {
+                        content: 'x';
+                    }
+
+                    &::before {
+                        content: '';
+                        @include utils.bg-defaults(cover);
+                        @include utils.square(20px);
+                        background-image: url('assets/icons/doc.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .contacts {
+        &__warning {
+            margin: 20px 0 40px;
+            font-size: 1.4rem;
+        }
+
+        &__body {
+            flex-direction: column;
+        }
+
+        &__info {
+            padding: 16px;
+        }
+
+        &__icon {
+            @include utils.square(54px);
+            margin-bottom: 34px;
+        }
+
+        &__text {
+            font-size: 2.8rem;
+        }
+
+        &__tel {
+            font-size: 2rem;
+        }
+
+        &__work-hours {
+            font-size: 1.3rem;
+        }
+
+        &__mail {
+            font-size: 1.4rem;
+        }
+
+        &__address {
+            flex-direction: column;
+
+            &-item {
+                max-width: 100%;
+
+                p {
+                    font-size: 1.3rem;
+
+                    & + p {
+                        margin-top: 10px;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .form-block {
+            margin-top: 70px;
+
+            .container {
+                height: 700px;
+            }
+
+            form {
+                .input {
+                    width: 100%;
+                }
+
+                .button {
+                    order: 1;
+                }
+            }
+        }
+    }
+}

@@ -3,15 +3,14 @@
 .input {
     padding: 16px 20px;
     width: 100%;
-    color: var(--bg);
-    font-family: var(--roboto-regular);
-    font-size: 1.6rem;
-    line-height: 138%;
+    color: #030404;
+    font: var(--text-base_100);
     background-color: var(--base_100);
     border-radius: 34px;
 
     &::placeholder {
         color: #26292a;
+        opacity: 0.7;
     }
 
     &._invalid {
@@ -21,6 +20,30 @@
 
 @media only screen and (max-width: 1000px) {
     .input {
+        padding: 12px 16px;
+        font-size: 1.4rem;
+    }
+}
+
+textarea {
+    padding: 15px 20px;
+    color: #030404;
+    font: var(--text-base_100);
+    background-color: var(--base_100);
+    border-radius: 18px;
+    resize: none;
+
+    &::placeholder {
+        color: #26292a;
+        opacity: 0.7;
+    }
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    @media only screen and (max-width: 1000px) {
         padding: 12px 16px;
         font-size: 1.4rem;
     }

@@ -1,0 +1,60 @@
+extends layout/page
+include layout/utils
+include ui/breadcrumbs/breadcrumbs
+
+block append head
+
+block append main
+    +section.contacts
+        +breadcrumbs(['Контакты'])
+        .page__title.contacts__title Контакты
+        .contacts__warning Уважаемые клиенты! На территории работает пропускной режим. Просим согласовывать время приезда с Вашим менеджером.
+        .contacts__body
+            .contacts__info
+                +img(require('assets/icons/phone.svg')).contacts__icon
+                .contacts__text Мы всегда на связи
+                +anchor('tel:8 (495) 488-65-96').contacts__tel 8 (495) 488-65-96
+                .contacts__work-hours с 10:00 до 18:00
+                +anchor('mailto:info@divex-group.ru').contacts__mail info@divex-group.ru
+                .contacts__messagers
+                    +anchor.contacts__tg
+                        +img(require('assets/icons/tg.svg'))
+                    +anchor.contacts__wa
+                        +img(require('assets/icons/wa.svg'))
+            .contacts__info
+                +img(require('assets/icons/location.svg')).contacts__icon
+                .contacts__text Мы всегда на связи
+                .contacts__address
+                    .contacts__address-item
+                        p Фактический:
+                        p 141031 Московская область, городской округ Мытищи, поселок Вешки, улица Архитектора Жолтовского, строение № 1А/1, офис №2
+                    .contacts__address-item
+                        p Производство::
+                        p 141031 Московская область, городской округ Мытищи, посёлок Нагорное, с23/Л
+                    .contacts__address-item
+                        p Юридический::
+                        p 129336, г. Москва, улица Стартовая, дом 25, корпус 3, этаж 2, офис 5
+                    .contacts__address-item
+                        p Адрес для корреспонденции:
+                        p 129345, г. Москва, а/я 27
+        .form-block
+            .container
+                .form-block__name.section__title Мы на связи
+                .form-block__content
+                    .form-block__title!= 'Нужна консультация?<br>Оставьте заявку — мы подскажем!'
+                    .form-block__text Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман семантически отражает хорей. Представленный лексико-семантический
+                    form(novalidate, data-handler='path.php')
+                        input.input(type='text', required, name='name', placeholder='Ваше Имя')
+                        input.input(type='tel', required, name='tel', placeholder='Номер телефона')
+                        input.input(type='mail', required, name='mail', placeholder='Email')
+                        textarea(name='comment', rows='4', placeholder='Здесь вы можете оставить комментарий')
+                        button.button.button--accent_200(type='submit') Получить консультацию
+                        label
+                            span прикрепить файл
+                            input(type='file')
+                    .form-block__policy Нажимая на кнопку «Получить консультацию» вы подтверждаете своё согласие с политикой конфиденциальности сайта
+                .form-block__content--thx
+                    .form-block__title!= 'Спасибо!<br>Ваш запрос успешно отправлен'
+                    .form-block__text Пожалуйста дождитесь звонка нашего менеджера для уточнения деталей
+                    button.button.button--accent_200 Понятно
+block append scripts

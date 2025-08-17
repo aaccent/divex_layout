@@ -3,6 +3,7 @@
 .breadcrumbs {
     gap: 8px;
     display: flex;
+    flex-wrap: wrap;
 
     &__item {
         gap: 8px;

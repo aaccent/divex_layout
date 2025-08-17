@@ -1,0 +1,28 @@
+include layout/utils
+
+mixin detaiHero(props)
+    -
+        props = Object.assign({
+            category: '',
+            title: '',
+            description: '',
+            image: ''
+        }, props || {})
+
+    .detail-hero
+        +img(props.image).detail-hero__image
+        .detail-hero__container
+            .detail-hero__tags
+                if props.category
+                    -
+                        var text = props.category === 'decor' ? 'ТВ декорации' :
+                            props.category === 'events' ? 'Оформление мероприятий' :
+                                props.category === 'article' ? 'Статья' :
+                            'Новости';
+                .detail-hero__tag(class=`--${props.category}`)= text
+                if props.tag
+                    .detail-hero__tag= props.tag
+            h1.detail-hero__title.page__title= props.title
+            if props.date
+                .detail-hero__date= props.date
+            .detail-hero__description= props.description

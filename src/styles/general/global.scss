@@ -196,3 +196,7 @@ html.disable-scroll {
         align-items: end;
     }
 }
+
+.container:has(.breadcrums) {
+    margin-top: 40px;
+}

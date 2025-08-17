@@ -23,11 +23,12 @@
 @use 'ui/tabs/tabs';
 @use 'ui/_pagination/_pagination';
 @use 'ui/selector/selector';
+@use 'ui/slider-navigation';
 
 // Page
 @use 'layout/header/header';
 @use 'layout/footer/footer';
-@use 'pages/blog/blog';
+@use 'pages/contacts/contacts';
 
 // Components
 @use 'components/clients/clients';
@@ -40,3 +41,4 @@
 @use 'components/seo/seo';
 @use 'components/page-hero/page-hero';
 @use 'components/service-content/service-content';
+@use 'components/detail-hero/detail-hero';
