@@ -1,3 +1,18 @@
+# Верстка сайта Дивэкс
+
+**Страницы:**
+
+- [Главная](https://aaccent.github.io/divex_layout/index.html)
+- [Категория](https://aaccent.github.io/divex_layout/category.html)
+- [Услуга](https://aaccent.github.io/divex_layout/service.html)
+- [Портфолио Общая](https://aaccent.github.io/portfolio-general.html)
+- [Портфолио Мероприятия](https://aaccent.github.io/divex_layout/portfolio-events.html)
+- [Портфолио Декорации](https://aaccent.github.io/divex_layout/portfolio-decor.html)
+- [Портфолио Детальная](https://aaccent.github.io/divex_layout/portfolio-detail.html)
+- [Блог](https://aaccent.github.io/divex_layout/blog.html)
+- [Блог Детальная](https://aaccent.github.io/divex_layout/blog-detail.html)
+- [Контакты](https://aaccent.github.io/divex_layout/contacts.html)
+
 # Набор для верстки сайтов
 
 ## Стек
