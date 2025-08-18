@@ -5,7 +5,7 @@
 - [Главная](https://aaccent.github.io/divex_layout/index.html)
 - [Категория](https://aaccent.github.io/divex_layout/category.html)
 - [Услуга](https://aaccent.github.io/divex_layout/service.html)
-- [Портфолио Общая](https://aaccent.github.io/portfolio-general.html)
+- [Портфолио Общая](https://aaccent.github.io/divex_layout/portfolio-general.html)
 - [Портфолио Мероприятия](https://aaccent.github.io/divex_layout/portfolio-events.html)
 - [Портфолио Декорации](https://aaccent.github.io/divex_layout/portfolio-decor.html)
 - [Портфолио Детальная](https://aaccent.github.io/divex_layout/portfolio-detail.html)
